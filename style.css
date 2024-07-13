@@ -1,0 +1,875 @@
+/* ============ *\
+   RESET
+\* ============ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/* Make HTML 5 elements display block-level for consistent styling */
+main, article, section, aside, hgroup, nav, header, footer, figure, figcaption {
+    display: block;
+  }
+
+  * {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+p {
+	padding: 10px 0;
+}
+
+h1, h2, h3 {
+	font-family: 'Open Sans Condensed', sans-serif;	
+}
+
+h1, h2 {
+	font-size: 60px;
+	line-height: 60px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+h3 {
+	font-size:30px;
+	line-height: 30px;
+	padding-top: 5px;
+	text-transform: uppercase;
+	left: 0.75px;
+}
+
+::selection {
+	background: #000000;
+	color: #ffffff;
+}
+
+::-moz-selection {
+	background: #000000;
+	color: #ffffff;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* ============ *\
+   STRUCTURE
+\* ============ */
+
+.item1 { grid-area: axton; }
+.item2 { grid-area: steam; }
+.item3 { grid-area: maya; }
+.item4 { grid-area: logo; }
+.item5 { grid-area: product; }
+.item6 { grid-area: salvador; }
+.item7 { grid-area: playstation; }
+.item8 { grid-area: gearbox; }
+.item9 { grid-area: zer0; }
+
+.container {
+	width: 100%;
+	margin:0 ;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-areas: 
+	"axton axton steam maya"
+	"logo product product maya"
+	"salvador product product playstation"
+	"salvador gearbox zer0 zer0";
+}
+
+.container > div {
+	display: grid;
+	min-height: 360px;
+	align-items: center;
+  transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+}
+
+/* AXTON */
+.item1{
+    position: relative;
+    background-image: linear-gradient(135deg, #048243 0%, #004225	100%);
+    color: #3D3D3D;
+}
+.item1 div{
+    width: 60%;
+    padding: 5%;
+    justify-self: end;
+}
+.item1 div h2{
+    color:black
+}
+.item1 div h3{
+    color:#50C878
+}
+
+.item1 div p {
+    color: white
+}
+.item1 div h2, h3, p{
+    margin-left: 5px;
+    text-align: left;
+    bottom: 5px;
+}
+.item1 div img{
+    display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0%;
+	width: 50%;
+}
+
+/* STEAM */
+
+.item2 {
+    position:relative;
+	background: -moz-radial-gradient(center, ellipse cover,  #02a9d9 0%, #2c0aaa 100%);
+	background: -webkit-radial-gradient(center, ellipse cover,  #02a9d9 0%,#2c0aaa 100%);
+	background: radial-gradient(ellipse at center,  #02a9d9 0%,#2c0aaa 100%);
+    color: white;
+    text-align: center;
+}
+
+.item2 img {
+	margin-bottom: 5px;
+    width: 70%;
+	height: 70%
+}
+
+/* MAYA */
+
+.container .item3 {
+	align-items: start;
+}
+
+.item3{
+    position: relative;
+	background-image: linear-gradient(135deg, skyblue 0%, #b65fcf	100%);
+	color: #000000;
+}
+
+.item3 div {
+    width: 100%;
+	padding: 16% 10% 10% 10%;
+}
+
+.item3 div h2{
+    color: black;
+}
+.item3 div h3{
+    color: purple;
+}
+
+.item3 div img {
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	left: 0%;
+	width: 90%;
+}
+
+/* B2 Logo */
+.item4{
+    background: radial-gradient(ellipse at center,  grey 0%, black 100%);
+    position:relative;
+}
+.item4 img{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    align-self: center;
+    justify-content: center;
+}
+
+/* PRODUCT */
+
+.item5{
+    position: relative;
+    background: url(Images/Bordlerlands2PandoraWallpaper2.jpg);
+    background-size: cover;
+    color: white;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.50);
+}
+.item5 div{
+    margin: 5%;
+    min-width: 45%;
+	justify-self: center;
+	text-align:center;
+	color: white;
+}
+.item5 div p{
+    text-align: center;
+}
+.item5 div img{
+    display: block;
+	width: 40%;
+	margin: 0 auto 2em auto;
+}
+
+/* SALVADOR */
+.container .item6 {
+	align-items: start;
+}
+
+.item6{
+    position: relative;
+	background-image: linear-gradient(135deg, #0D98BA 0%, #FF2400 100%);
+	color: #000000;
+}
+.item6 div{
+    width: 100%;
+    padding: 3%;
+}
+
+.item6 h2{
+    color: #fa8128;
+}
+.item6 div img {
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	right: 1%;
+	width: 100%;
+    height: 57%;
+}
+/* PLAYSTATION */
+
+.item7{
+    background-color:white;
+    position: relative;
+}
+.item7 div img{
+    display:block;
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+/* GEARBOX */
+
+.item8{
+    background-color: #FF2400;
+    position: relative;
+}
+.item8 div img{
+    display: block;
+    padding: 5%;
+    width: 100%;
+    height: auto;
+}
+
+/* ZER0 */
+
+.item9{
+    position: relative;
+    background-image: linear-gradient(135deg, #FF2400 0%, #DE3163 100%);
+    color: white;
+    display: grid;
+}
+.item9 div{
+    width: 100%;
+    padding: 3%;
+}
+
+.item9 div h2, h3, p{
+    text-align: left;
+    justify-self: end;
+}
+
+.item9 h2{
+    margin-left: 50%;
+    color: #E37383;
+}
+
+.item9 h3{
+    margin-left: 50%;
+}
+
+.item9 p{
+    margin-left: 50%;
+}
+
+.item9 div img{
+    display: block;
+	position: absolute;
+	top: 0px;
+	left: 0%;
+	width: 44%;
+}
+
+/* ============ *\
+   ADAPTIVE PROGRAMMING
+\* ============ */
+
+/* ====================== *\
+   MOBILE
+\* ====================== */
+
+@media screen and (max-width: 600px) {
+    h1, h2 {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+    h3 {
+		font-size:24px;
+		line-height: 24px;
+	}
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+        grid-template-areas:
+        "product product product product"
+        "axton axton axton axton"
+        "maya maya maya maya"
+        "salvador salvador salvador salvador"
+        "zer0 zer0 zer0 zer0"
+        "logo steam playstation gearbox";
+    }
+
+    .container > div {
+		display: grid;
+		min-height: 300px;
+		align-items: center;
+	}
+
+    /* AXTON */
+
+    .item1 div {
+		width: 100%;
+		padding: 5% 5% 80% 5%;
+	}
+
+	.item1 div img {
+		left: 0%;
+		width: 82%;
+	}
+
+    /* STEAM */
+
+    .item2 h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .item2 img {
+		width: 100%;
+	}
+
+    /* MAYA */
+
+    .item3 div {
+		padding: 5% 5% 85% 5%
+	}
+
+	.item3 div img {
+		width: 100%;
+	}
+
+    /* LOGO */
+
+    .item4 img {
+        width: 100%;
+        height: 80%;
+	}
+
+    /* PRODUCT */
+
+    .item5 div {
+		align-items: center;
+		max-width: 80%;
+		padding: 5%;
+	}
+	
+	.item5 div img {
+		max-width: 50%;
+	}
+	
+	.item5 div .copy {
+		padding: 0;
+	}
+
+    /* SALVADOR */
+
+    .item6 div {
+		padding: 5% 5% 80% 5%;
+	}
+
+	.item6 div img {
+		width: 100%;
+        height: 62%;
+	}
+
+    /* PLAYSTATION */
+
+    .item7 img {
+		width: 75%;
+	}
+
+    /* GEARBOX */
+
+    .item8 img {
+		width: 75%;
+	}
+
+    /* ZER0 */
+
+    .container .item9 {
+		align-items: center;
+	}
+
+	.item9 div {
+        width: 100%;
+        padding: 3%;
+	}
+
+	.item9 div img {
+		width: 48%;
+        height: 100%;
+	}	
+
+}
+
+@media screen and (min-width:601px) and (max-width:800px) {
+    
+    .container {
+		width: 100%;
+		margin: 0;
+		grid-template-areas: 
+        "product product product product"
+        "axton axton axton axton"
+        "maya maya maya maya"
+        "salvador salvador salvador salvador"
+        "zer0 zer0 zer0 zer0"
+        "logo steam playstation gearbox";
+	}
+	.container > div {
+		display: grid;
+		min-height: 300px;
+		align-items: center;
+	}
+
+    /* AXTON */
+    .item1 div {
+		width: 100%;
+		padding: 5% 5%;
+        margin-bottom: 50%;
+	}
+
+	.item1 div img {
+		left: 0%;
+		width: 75%;
+        height: 50%;
+	}
+
+    /* STEAM */
+    .item2 img {
+		max-width: 100%;
+	}
+
+    .item2 h1{
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    /* MAYA */
+
+    .item3 div {
+		padding: 5% 5%;
+	}
+
+	.item3 div img {
+		left: inherit;
+		right: 0;
+		width: 100%;
+        height: 45%;
+	}
+
+    /* LOGO */
+
+    .item4 img {
+		max-width: 100%;
+	}
+
+    /* PRODUCT */
+    .item5 div {
+		align-items: center;
+		max-width: 80%;
+	}
+
+    .item5 h1{
+        font-size: 20px;
+    }
+	
+	.item5 div img {
+		max-width: 50%;
+	}
+	
+	.item5 div .copy {
+        margin-left: 10%;
+	}
+
+    /* SALVADOR */
+
+    .container .item6 {
+		align-items: center;
+	}
+
+	.item6 div {
+		padding: 5% 5%;
+        margin-bottom: 60%;
+	}
+
+	.item6 div img {
+		left: inherit;
+		right: 0;
+		width: 100%;
+        height: 52%;
+	}
+
+    /* PLAYSTATION */
+
+    .item7 img {
+		max-width: 100%;
+	}
+
+    /* GEARBOX */
+
+    .item8 img {
+		max-width: 100%;
+	}
+
+    /* ZER0 */
+    .item9 div {
+		padding: 5%;
+	}
+
+    .item9 div img{
+        width: 48%;
+        height: 100%;
+    }
+
+}
+
+@media screen and (min-width:801px) and (max-width:1140px) {
+	
+	.container {
+		max-width: 100%;
+		margin: 0;
+		grid-template-areas: 
+		"product product product product"
+		"axton axton maya maya"
+		"logo logo steam steam"
+		"gearbox gearbox playstation playstation"
+		"zer0 zer0 salvador salvador";
+	}
+	.container > div {
+		display: grid;
+		min-height: 300px;
+		align-items: center;
+	}
+
+    /* AXTON */
+	.item1 div {
+		width: 100%;
+		padding: 5% 5%;
+        margin-bottom: 100%;
+	}
+
+	.item1 div img {
+		left: 0%;
+		width: 100%;
+	}
+    /* STEAM */
+	.item2 img {
+		max-width: 100%;
+	}
+
+    /* MAYA */
+	.item3 div {
+		padding: 5% 5%;
+		font-size: 14.5px;
+	}
+
+	.item3 div img {
+		left: inherit;
+		right: 0;
+		width: 100%;
+	}
+    /* LOGO */
+	.item4 img {
+		max-width: 100%;
+	}
+
+    /* PRODUCT */
+	.item5 div {
+		align-items: center;
+		max-width: 60%;
+	}
+
+	.item5 h1{
+        font-size: 20px;
+    }
+	
+	.item5 div img {
+		max-width: 50%;
+	}
+	
+	.item5 div .copy {
+        margin-left: 20%;
+	}
+    /* SALVADOR */
+	.container .item6 {
+		align-items: center;
+	}
+
+	.item6 div {
+		padding: 5% 5%;
+        margin-bottom: 60%;
+		font-size: 14.5px;
+	}
+
+	.item6 div img {
+		left: inherit;
+		right: 0;
+		width: 100%;
+		height: 40%;
+	}
+
+    /* PLAYSTATION */
+	.item4 img {
+		max-width: 100%;
+	}
+
+    /* GEARBOX */
+	.item4 img {
+		max-width: 100%;
+	}
+
+    /* ZER0 */
+	.container .item9 {
+		align-items: center;
+	}
+
+	.item9 div {
+		padding: 5% 5%;
+        margin-bottom: 70%;
+		font-size: 14.5px;
+	}
+
+	.item9 p{
+		margin-left: 0%;
+	}
+
+	.item9 h2{
+		margin-left: 0%;
+	}
+
+	.item9  h3{
+		margin-left: 0%;
+	}
+
+	.item9 div img {
+		left: inherit;
+		right: 0;
+		width: 100%;
+		height: 41%;
+		margin-top: 100%;
+	}
+}
+
+@media screen and (min-width:1141px) and (max-width:1750px) {
+	.container {
+		margin: 0;
+		grid-template-areas: 
+		"product product product product"
+		"axton axton maya maya"
+		"logo playstation steam gearbox"
+		"zer0 zer0 salvador salvador";
+}
+	.container > div {
+		display: grid;
+		min-height: 400px;
+		align-items: center;
+	}
+    /* AXTON */
+	.item1 div {
+		width: 100%;
+		padding: 5%;
+		margin-bottom: 100%;
+	}
+	.item1 div img {
+		left: 0%;
+		width: 100%;
+	}
+
+    /* STEAM */
+	.item2 img {
+		max-width: 100%;
+	}
+
+    /* MAYA */
+	.item3 div {
+		padding: 5%;
+		margin-top: 8%;
+	}
+
+	.item3 div img {
+		left: inherit;
+		right: 0;
+		width: 100%;
+		height: 55%;
+	}
+
+    /* LOGO */
+	.item4 img {
+		max-width: 100%;
+	}
+
+    /* PRODUCT */
+	.item5 div {
+		align-items: center;
+		max-width: 60%;
+		padding: 5%;
+	}
+
+	.item5 div h1{
+		margin-left: 25%;
+	}
+
+	.item5 div p{
+		margin-left: 25%;
+	}
+	
+	.item5 div img {
+		max-width: 75%;
+	}
+
+	.item5 div .copy {
+		display: block;
+		width: 75%;
+	}
+
+    /* SALVADOR */
+	.container .item6 {
+		align-items: center;
+	}
+
+	.item6 div {
+		padding: 5% 5%;
+        margin-bottom: 100%;
+	}
+
+	.item6 div img {
+		left: inherit;
+		right: 0;
+		width: 100%;
+		height: 60%;
+	}
+
+    /* PLAYSTATION */
+	.item7 img {
+		max-width: 100%;
+	}
+
+    /* GEARBOX */
+	.item8 img {
+		max-width: 100%;
+	}
+
+    /* ZER0 */
+	.container .item9 {
+		align-items: center;
+	}
+
+	.item9 div {
+		padding: 5% 5%;
+        margin-bottom: 100%;
+	}
+
+	.item9 p{
+		margin-left: 0%;
+	}
+
+	.item9 h2{
+		margin-left: 0%;
+	}
+
+	.item9  h3{
+		margin-left: 0%;
+	}
+
+	.item9 div img {
+		left: inherit;
+		right: 0;
+		width: 100%;
+		height: 56%;
+		margin-top: 84.25%;
+	}
+}
