@@ -295,7 +295,7 @@ sub, sup {
 	bottom: 0px;
 	right: 1%;
 	width: 100%;
-    	height: 50%;
+    height: 54%;
 }
 /* PLAYSTATION */
 
@@ -795,16 +795,16 @@ sub, sup {
     /* PRODUCT */
 	.item5 div {
 		align-items: center;
-		max-width: 60%;
+		width: 60%;
 		padding: 5%;
 	}
 
 	.item5 div h1{
-		margin-left: 25%;
+		margin-left: 20%;
 	}
 
 	.item5 div p{
-		margin-left: 25%;
+		margin-left: 20%;
 	}
 	
 	.item5 div img {
@@ -870,6 +870,6 @@ sub, sup {
 		right: 0;
 		width: 100%;
 		height: 56%;
-		margin-top: 84.25%;
+		margin-top: 75%;
 	}
 }
